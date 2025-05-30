@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Well-being Questionnaire</title>
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Well-being Questionnaire</h1>
+            <p>Your feedback helps us improve student support services</p>
+        </header>
+        
+        <div class="disclaimer">
+            <strong>Note:</strong> All responses will be kept confidential and used only for well-being support purposes.
+        </div>
+        
+        <form id="wellbeingForm">
+            <div class="form-section">
+                <h2>Student Verification</h2>
+                <div class="form-group">
+                    <label for="fullName">Full Name*</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <div class="error" id="nameError">Please enter your full name</div>
+                </div>
+                <div class="form-group">
+                    <label for="studentId">Student ID*</label>
+                    <input type="text" id="studentId" name="studentId" required>
+                    <div class="error" id="idError">Please enter your student ID</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" name="email" required placeholder="example@university.edu">
+                    <div class="error" id="emailError">Please enter a valid university email address</div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Mental & Emotional Well-being</h2>
+                <div class="form-group">
+                    <label>How often do you feel stressed or overwhelmed?</label>
+                    <div class="radio-group">
+                        <div class="radio-option"><input type="radio" id="stressNever" name="stressLevel" value="Never" required><label for="stressNever">Never</label></div>
+                        <div class="radio-option"><input type="radio" id="stressRarely" name="stressLevel" value="Rarely"><label for="stressRarely">Rarely</label></div>
+                        <div class="radio-option"><input type="radio" id="stressSometimes" name="stressLevel" value="Sometimes"><label for="stressSometimes">Sometimes</label></div>
+                        <div class="radio-option"><input type="radio" id="stressOften" name="stressLevel" value="Often"><label for="stressOften">Often</label></div>
+                        <div class="radio-option"><input type="radio" id="stressAlways" name="stressLevel" value="Always"><label for="stressAlways">Always</label></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Do you feel comfortable seeking help for mental health concerns?</label>
+                    <div class="radio-group">
+                        <div class="radio-option"><input type="radio" id="helpYes" name="helpComfort" value="Yes" required><label for="helpYes">Yes</label></div>
+                        <div class="radio-option"><input type="radio" id="helpNo" name="helpComfort" value="No"><label for="helpNo">No</label></div>
+                        <div class="radio-option"><input type="radio" id="helpUnsure" name="helpComfort" value="Unsure"><label for="helpUnsure">Unsure</label></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>What emotions do you experience most frequently? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option"><input type="checkbox" id="emotionHappy" name="emotions" value="Happiness"><label for="emotionHappy">Happiness</label></div>
+                        <div class="checkbox-option"><input type="checkbox" id="emotionAnxiety" name="emotions" value="Anxiety"><label for="emotionAnxiety">Anxiety</label></div>
+                        <div class="checkbox-option"><input type="checkbox" id="emotionSadness" name="emotions" value="Sadness"><label for="emotionSadness">Sadness</label></div>
+                        <div class="checkbox-option"><input type="checkbox" id="emotionAnger" name="emotions" value="Anger"><label for="emotionAnger">Anger</label></div>
+                        <div class="checkbox-option"><input type="checkbox" id="emotionCalm" name="emotions" value="Calmness"><label for="emotionCalm">Calmness</label></div>
+                        <div class="checkbox-option"><input type="checkbox" id="emotionLonely" name="emotions" value="Loneliness"><label for="emotionLonely">Loneliness</label></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Academic Well-being</h2>
+                <div class="form-group">
+                    <label>How satisfied are you with your academic workload?</label>
+                    <div class="radio-group">
+                        <div class="radio-option"><input type="radio" id="workloadVerySatisfied" name="workloadSatisfaction" value="Very Satisfied" required><label for="workloadVerySatisfied">Very Satisfied</label></div>
+                        <div class="radio-option"><input type="radio" id="workloadSatisfied" name="workloadSatisfaction" value="Satisfied"><label for="workloadSatisfied">Satisfied</label></div>
+                        <div class="radio-option"><input type="radio" id="workloadNeutral" name="workloadSatisfaction" value="Neutral"><label for="workloadNeutral">Neutral</label></div>
+                        <div class="radio-option"><input type="radio" id="workloadDissatisfied" name="workloadSatisfaction" value="Dissatisfied"><label for="workloadDissatisfied">Dissatisfied</label></div>
+                        <div class="radio-option"><input type="radio" id="workloadVeryDissatisfied" name="workloadSatisfaction" value="Very Dissatisfied"><label for="workloadVeryDissatisfied">Very Dissatisfied</label></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Do you feel supported by your professors and academic advisors?</label>
+                    <div class="radio-group">
+                        <div class="radio-option"><input type="radio" id="supportStronglyAgree" name="facultySupport" value="Strongly Agree" required><label for="supportStronglyAgree">Strongly Agree</label></div>
+                        <div class="radio-option"><input type="radio" id="supportAgree" name="facultySupport" value="Agree"><label for="supportAgree">Agree</label></div>
+                        <div class="radio-option"><input type="radio" id="supportNeutral" name="facultySupport" value="Neutral"><label for="supportNeutral">Neutral</label></div>
+                        <div class="radio-option"><input type="radio" id="supportDisagree" name="facultySupport" value="Disagree"><label for="supportDisagree">Disagree</label></div>
+                        <div class="radio-option"><input type="radio" id="supportStronglyDisagree" name="facultySupport" value="Strongly Disagree"><label for="supportStronglyDisagree">Strongly Disagree</label></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>How often do you struggle with motivation for studies?</label>
+                    <div class="radio-group">
+                        <div class="radio-option"><input type="radio" id="motivationNever" name="motivationStruggle" value="Never" required><label for="motivationNever">Never</label></div>
+                        <div class="radio-option"><input type="radio" id="motivationRarely" name="motivationStruggle" value="Rarely"><label for="motivationRarely">Rarely</label></div>
+                        <div class="radio-option"><input type="radio" id="motivationSometimes" name="motivationStruggle" value="Sometimes"><label for="motivationSometimes">Sometimes</label></div>
+                        <div class="radio-option"><input type="radio" id="motivationOften" name="motivationStruggle" value="Often"><label for="motivationOften">Often</label></div>
+                        <div class="radio-option"><input type="radio" id="motivationAlways" name="motivationStruggle" value="Always"><label for="motivationAlways">Always</label></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Social & Physical Well-being</h2>
+                <div class="form-group">
+                    <label>How would you rate your social connections with peers?</label>
+                    <div class="radio-group">
+                        <div class="radio-option"><input type="radio" id="socialExcellent" name="socialConnections" value="Excellent" required><label for="socialExcellent">Excellent</label></div>
+                        <div class="radio-option"><input type="radio" id="socialGood" name="socialConnections" value="Good"><label for="socialGood">Good</label></div>
+                        <div class="radio-option"><input type="radio" id="socialAverage" name="socialConnections" value="Average"><label for="socialAverage">Average</label></div>
+                        <div class="radio-option"><input type="radio" id="socialPoor" name="socialConnections" value="Poor"><label for="socialPoor">Poor</label></div>
+                        <div class="radio-option"><input type="radio" id="socialVeryPoor" name="socialConnections" value="Very Poor"><label for="socialVeryPoor">Very Poor</label></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>How many hours of sleep do you get on average per night?</label>
+                    <div class="radio-group">
+                        <div class="radio-option"><input type="radio" id="sleepLess4" name="sleepHours" value="Less than 4 hours" required><label for="sleepLess4">Less than 4 hours</label></div>
+                        <div class="radio-option"><input type="radio" id="sleep4to6" name="sleepHours" value="4-6 hours"><label for="sleep4to6">4-6 hours</label></div>
+                        <div class="radio-option"><input type="radio" id="sleep6to8" name="sleepHours" value="6-8 hours"><label for="sleep6to8">6-8 hours</label></div>
+                        <div class="radio-option"><input type="radio" id="sleepMore8" name="sleepHours" value="More than 8 hours"><label for="sleepMore8">More than 8 hours</label></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Do you engage in regular physical activity?</label>
+                    <div class="radio-group">
+                        <div class="radio-option"><input type="radio" id="activityDaily" name="physicalActivity" value="Yes, daily" required><label for="activityDaily">Yes, daily</label></div>
+                        <div class="radio-option"><input type="radio" id="activity3to5" name="physicalActivity" value="3-5 times a week"><label for="activity3to5">3-5 times a week</label></div>
+                        <div class="radio-option"><input type="radio" id="activityRarely" name="physicalActivity" value="Rarely"><label for="activityRarely">Rarely</label></div>
+                        <div class="radio-option"><input type="radio" id="activityNever" name="physicalActivity" value="Never"><label for="activityNever">Never</label></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Open-Ended Feedback</h2>
+                <div class="form-group">
+                    <label for="improvements">What improvements would you suggest to enhance student well-Questionare System at the university?</label>
+                    <textarea id="improvements" name="improvements"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>How satisfied are you with the current support services? (Rate 1-5 stars)</label>
+                    <div class="star-rating">
+                      <input type="radio" id="support-5" name="supportRating" value="5">
+                      <label for="support-5" class="star">★</label>
+                      
+                      <input type="radio" id="support-4" name="supportRating" value="4">
+                      <label for="support-4" class="star">★</label>
+                      
+                      <input type="radio" id="support-3" name="supportRating" value="3">
+                      <label for="support-3" class="star">★</label>
+                      
+                      <input type="radio" id="support-2" name="supportRating" value="2">
+                      <label for="support-2" class="star">★</label>
+                      
+                      <input type="radio" id="support-1" name="supportRating" value="1">
+                      <label for="support-1" class="star">★</label>
+                    </div>
+                    
+                    <label for="additionalSupport">What additional support would you like to see provided?</label>
+                    <textarea id="additionalSupport" name="additionalSupport" placeholder="Please share your suggestions..."></textarea>
+                  </div>
+                  
+                  <style>
+                  .star-rating {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+                    margin-bottom: 15px;
+                  }
+                  
+                  .star-rating input {
+                    display: none;
+                  }
+                  
+                  .star-rating label {
+                    font-size: 2em;
+                    color: #ccc;
+                    cursor: pointer;
+                    padding: 0 5px;
+                  }
+                  
+                  .star-rating input:checked ~ label,
+                  .star-rating input:hover ~ label,
+                  .star-rating label:hover {
+                    color: gold;
+                  }
+                  </style>
+                  
+                  <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                    const stars = document.querySelectorAll('.star-rating input');
+                    stars.forEach(star => {
+                      star.addEventListener('change', function() {
+                        const rating = this.value;
+                        console.log(`Selected rating: ${rating} stars`);
+                      });
+                    });
+                  });
+                  </script>
+            </div>
+            
+            <div class="verification-section">
+                <div class="form-group">
+                    <label for="submissionDate">Submission Date</label>
+                    <input type="date" id="submissionDate" name="submissionDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="digitalSignature">Digital Signature (Type your full name)</label>
+                    <input type="text" id="digitalSignature" name="digitalSignature" required>
+                    <div class="error" id="signatureError">Please provide your digital signature</div>
+                </div>
+                <div class="form-group">
+                    <p>By submitting this form, I confirm that my responses are accurate and voluntary.</p>
+                </div>
+                <button type="submit" class="btn btn-block">Submit Questionnaire</button>
+            </div>
+        </form>
+        
+        <div class="success-message" id="successMessage">
+            <h2>Thank You!</h2>
+            <p>Your responses have been submitted successfully.</p>
+            <p>If you need immediate support, please contact the <a href="https://zppsu.edu.ph" target="_blank">Official website of ZPPSU</a>.</p>
+        </div>
+        
+        <footer>
+            <p>© 2025 ZPPSU.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
